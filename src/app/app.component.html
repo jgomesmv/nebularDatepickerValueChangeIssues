@@ -1,0 +1,19 @@
+<nb-layout-column>
+  <nb-layout>
+    <nb-layout-column>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input nbInput placeholder="Name" [formControl]="form.get('name')" />
+        <input nbInput placeholder="Address" [formControl]="form.get('address')" />
+        <input
+          nbInput
+          placeholder="Pick Date"
+          [nbDatepicker]="datepicker"
+          [formControl]="form.get('date')"
+        />
+        <nb-datepicker #datepicker></nb-datepicker>
+
+        <button nbButton>Submit</button>
+      </form>
+    </nb-layout-column>
+  </nb-layout>
+</nb-layout-column>
